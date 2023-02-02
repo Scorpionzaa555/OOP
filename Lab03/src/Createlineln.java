@@ -12,5 +12,6 @@ public class Createlineln {
                 System.out.println();
             }
         }
+        System.out.println();
     }
 }
