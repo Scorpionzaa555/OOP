@@ -11,5 +11,6 @@ public class Creatline {
                 System.out.print("/");
             }
         }
+        System.out.println();
     }
 }
