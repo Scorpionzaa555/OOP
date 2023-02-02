@@ -14,6 +14,6 @@ public class CountOddEven {
             }
             System.out.println();
         }
-        System.out.print("Odd number = " + cnt2 + " and Even number = " + cnt1);
+        System.out.println("Odd number = " + cnt2 + " and Even number = " + cnt1);
     }
 }
