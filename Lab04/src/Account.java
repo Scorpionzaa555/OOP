@@ -10,13 +10,16 @@ public class Account {
     }
 
     public double withdraw (double b) {
-        balance -= b;
-        if (b >= 0) {
-            return balance;
-        } else {
-            return 0;
-            System.out.println("The balance variable must be greater than or equal to zero.");
+        if (b < 0) {
+            System.out.println("The balance variable must e greater than or equal to zero.");
+            return;
         }
+        if ((balance - b) < 0) {
+            System.out.println("Your account balance is insufficient.");
+            return;
+        }
+        double value = balance - b;
+        balance = value;
     }
   
     public void showInfo () {
