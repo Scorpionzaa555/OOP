@@ -1,6 +1,6 @@
 public class Mydate {
     public int day, month, year;
     public void showDate () {
-        return day + "/" + month + "/" + "year";
+        System.out.println(day + "/" + month + "/" + year);
     }
 }
