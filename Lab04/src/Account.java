@@ -10,7 +10,13 @@ public class Account {
     }
 
     public double withdraw (double b) {
-        //gg
+        balance -= b;
+        if (b >= 0) {
+            return balance;
+        } else {
+            return 0;
+            System.out.println("The balance variable must be greater than or equal to zero.");
+        }
     }
   
     public void showInfo () {
