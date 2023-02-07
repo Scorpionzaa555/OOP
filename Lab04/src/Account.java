@@ -2,24 +2,25 @@ public class Account {
     public double balance;
     public String name;
     public void deposit (double b) {
-        if (b >= 0) {
-            balance += b;
-        } else {
-            System.out.println("The balance variable must be greater than or equal to zero");
+        if (b < 0) {
+            System.out.println("The balance variable must e greater than or equal to zero.");
+            return;
         }
+        balance += b;
     }
 
     public double withdraw (double b) {
         if (b < 0) {
             System.out.println("The balance variable must e greater than or equal to zero.");
-            return;
+            //return;
         }
         if ((balance - b) < 0) {
             System.out.println("Your account balance is insufficient.");
-            return;
+            return 0;
         }
         double value = balance - b;
         balance = value;
+        return balance;
     }
   
     public void showInfo () {
