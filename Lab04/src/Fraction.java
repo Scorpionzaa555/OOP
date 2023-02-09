@@ -21,7 +21,8 @@ public class Fraction {
     }
     
     public boolean myEquals (Fraction x) {
-        return (this.topN == x.topN) && (this.btmN == x.btmN);
+        //return (this.topN == x.topN) && (this.btmN == x.btmN);
+        return ((topN*0.1/btmN) == (x.topN*0.1/x.btmN));
     }
     
     public void LowestTermFrac () {
