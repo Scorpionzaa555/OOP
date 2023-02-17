@@ -1,8 +1,8 @@
 public class FootballPlayer extends Player{
     private int playerNumber;
     private String position;
-    public void setPlayerNumber(int i) {
-        playerNumber = i;
+    public void setPlayerNumber(int n) {
+        playerNumber = n;
     }
 
     public int getPlayerNumber() {
