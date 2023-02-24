@@ -4,25 +4,15 @@ public class Employee {
     private Wallet wallet;
     private int energy;
     public boolean equals(Employee e) {
-        return (this.name.equals(e.getName()));
-    }
-    
-    @Override
-    public String toString() {
-        String txt = "";
-        txt += "My name is " + this.name + ".\n";
-        txt += "I have " + this.energy + " energy left.\n";
-        txt += "I have a balance of " + wallet.getBalance() + " baht.";
-        return txt;
+        return this.getName().equals(e.getName());
     }
     
     public boolean buyFood(Seller s) {
-        Food food = s.sell(this);
-        if(food != null) {
-            this.eat(food);
-            return true;
-        } else {
+        if(s == null) {
             return false;
+        } else {
+            this.eat(s.sell(this));
+            return true;
         }
     }
     
@@ -39,7 +29,7 @@ public class Employee {
     }
     
     public Wallet getWallet() {
-        return wallet;
+        return this.wallet;
     }
     
     public void setWallet(Wallet wallet) {
@@ -60,5 +50,14 @@ public class Employee {
     
     public static void setNationality(String nationality) {
         Employee.nationality = nationality;
+    }
+
+    @Override
+    public String toString() {
+        String txt = "";
+        txt += "My name is " + this.name + ".\n";
+        txt += "I have " + this.energy + " energy left.\n";
+        txt += "I have a balance of " + wallet.getBalance() + " baht.";
+        return txt;
     }
 }
