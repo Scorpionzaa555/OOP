@@ -17,12 +17,12 @@ public abstract class Vehicle implements Dieselable{
         this.fuel = fuel;
     }
     
-    public void addfuel(double fuel) {
-        if(fuel > 0) {
-            setFuel(getFuel() + fuel);
-        } else {
+    public void addFuel(double fuel) {
+        if (fuel < 0) {
             System.out.println("Fuel is empty.");
+            return;
         }
+        setFuel(getFuel() + fuel);
     }
     
     public abstract void honk();

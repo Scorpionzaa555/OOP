@@ -1,7 +1,7 @@
 public class Plane extends Vehicle implements Flyable {
     private String airline;
     private String boeing;
-    private final int MAX_FLYER;
+    private static final int MAX_FLYER = 2;
 
     public Plane() {
         this(0.0, "", "");
@@ -11,7 +11,6 @@ public class Plane extends Vehicle implements Flyable {
         super(fuel);
         this.airline = airline;
         this.boeing = boeing;
-        this.MAX_FLYER = 2;
     }
 
     public String getAirline() {
@@ -34,7 +33,7 @@ public class Plane extends Vehicle implements Flyable {
     public void startEngine() {
         if(getFuel() >= 20) {
             setFuel(getFuel() - 20);
-            System.out.println("Plane's Engine starts");
+            System.out.println("Plane’s Engine starts");
         } else {
             System.out.println("Fuel is not enough.");
         }
@@ -42,7 +41,7 @@ public class Plane extends Vehicle implements Flyable {
     
     @Override
     public void stopEngine() {
-        System.out.println("Plane's Engine stops");
+        System.out.println("Plane’s Engine stops");
     }
     
     @Override
