@@ -24,7 +24,8 @@ public class BuyCom {
                 total += printer;
             }
             System.out.println("======= Total price >>> " + total + " =======");
-        } else{
+        }
+        else{
             System.out.println("*43'Monitor >>> " + moni43 + "$");
             total = computer + moni43;
             if (bool_1 == 1){
