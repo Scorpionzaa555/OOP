@@ -4,7 +4,8 @@ public class Food {
     public static void setPrice(double price) {
         if(price > Food.getPrice()) {
             Food.price = price;
-        } else {
+        }
+        else {
             System.out.println("Cannot update the food price.");
         }
     }
