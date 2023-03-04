@@ -5,7 +5,8 @@ public class CalTax {
         double salary = sc.nextDouble(), tax;
         if (salary > 50000) {
             tax = salary * 0.1;
-        } else {
+        }
+        else {
             tax = salary * 0.05;
         }
         System.out.print(tax);
