@@ -40,7 +40,8 @@ public abstract class Bird implements Flyable {
     public void eat(double food) {
         if(food > 0) {
             this.weight += food;
-        } else {
+        }
+        else {
             System.out.println("Input cannot be negative number.");
         }
     }
