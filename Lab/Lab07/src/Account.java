@@ -16,7 +16,8 @@ public class Account {
         if(a > 0) {
             setBalance(this.balance + a);
             System.out.println(a + " baht is deposited to " + getName() + ".");
-        } else {
+        }
+        else {
             System.out.println("Input number must be a positive integer.");
         }
     }
@@ -26,10 +27,12 @@ public class Account {
             if(getBalance() - a > 0) {
                 setBalance(getBalance() - a);
                 System.out.println(a + " baht is withdrawn from " + getName() + ".");
-            } else {
+            }
+            else {
                 System.out.println("Not enough money!");
             }
-        } else{
+        }
+        else{
             System.out.println("Input number must be a positive integer.");
         } 
     }
