@@ -1,11 +1,14 @@
 public class Cat {
-    private String name, color;
-    public double height, weight;
+    private String name;
+    private String color;
+    public double height;
+    public double weight;
     
     private void setWeight (double w) {
         if (w >= 0) {
             this.weight = w;   
-        } else {
+        }
+        else {
             System.out.println("Error");
         }
     }
@@ -13,7 +16,8 @@ public class Cat {
     private void setHeight (double h) {
         if (h >= 0) {
             this.height = h;   
-        } else {
+        }
+        else {
             System.out.println("Error");
         }
     }
@@ -29,7 +33,8 @@ public class Cat {
     public void upWeight (double w) {
         if (w >= 0) {
             setWeight(this.weight + w);
-        } else {
+        }
+        else {
             System.out.println("Error");
         }
     }
@@ -37,7 +42,8 @@ public class Cat {
     public void downWeight (double w) {
         if (w >= 0) {
             setWeight(this.weight - w);
-        } else {
+        }
+        else {
             System.out.println("Error");
         }
     }
@@ -45,7 +51,8 @@ public class Cat {
     public void upHeight (double h) {
         if (h >= 0) {
             setHeight(this.height + h);
-        } else {
+        }
+        else {
             System.out.println("Error");
         }
     }
