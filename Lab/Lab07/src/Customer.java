@@ -47,7 +47,8 @@ public class Customer {
     public String toString() {
         if(getAcct() == null) {
             return getFirstName() + " " + getLastName() + " doesn’t have account.";
-        } else {
+        }
+        else {
             return "The " + getFirstName() + " account has " + getAcct().getBalance() + " baht and " + getAcct().getCredit() + " credits.";
         }
     }
