@@ -15,9 +15,11 @@ public class CalSalary {
         
         if ((age >= 21) && (age <= 30)) {
             salary = (numDay1 * 300) - (numDay2 * 50);
-        } else if ((age >= 31) && (age <= 40)) {
+        }
+        else if ((age >= 31) && (age <= 40)) {
             salary = (numDay1 * 500) - (numDay2 * 50);
-        } else if ((age >= 41) && (age <= 50)) {
+        }
+        else if ((age >= 41) && (age <= 50)) {
             salary = (numDay1 * 1000) - (numDay2 * 25);
         }
         if ((age >= 51) && (age <= 60)) {
