@@ -34,7 +34,8 @@ public class Plane extends Vehicle implements Flyable {
         if(getFuel() >= 20) {
             setFuel(getFuel() - 20);
             System.out.println("Plane’s Engine starts");
-        } else {
+        }
+        else {
             System.out.println("Fuel is not enough.");
         }
     }
@@ -54,7 +55,8 @@ public class Plane extends Vehicle implements Flyable {
         if(getFuel() >= 20) {
             setFuel(getFuel() - 20);
             System.out.println("Plane Fly");
-        } else {
+        }
+        else {
             System.out.println("Fuel is nearly empty.");
         }
     }
@@ -64,7 +66,8 @@ public class Plane extends Vehicle implements Flyable {
         if(getFuel() >= 10) {
             setFuel(getFuel() - 10);
             System.out.println("Plane Already to Take Off");
-        } else {
+        }
+        else {
             System.out.println("Fuel is nearly empty.");
         }
     }
@@ -74,7 +77,8 @@ public class Plane extends Vehicle implements Flyable {
         if(getFuel() >= 10) {
             setFuel(getFuel() - 10);
             System.out.println("Plane Already to Landing");
-        } else {
+        }
+        else {
             System.out.println("Fuel is nearly empty.");
         }
     }
