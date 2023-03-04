@@ -20,7 +20,8 @@ public class SeniorProgrammer extends Programmer {
             System.out.println("I'm coding about " + str);
             setEnergy(getEnergy() - 5);
             setHappiness(getHappiness() - 5);
-        } else {
+        }
+        else {
             System.out.println("ZzZzZz");
             setEnergy(getEnergy() - 5);
             setHappiness(getHappiness() - 5);
