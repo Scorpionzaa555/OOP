@@ -21,7 +21,8 @@ public class FootballPlayer extends Player{
         
         if((p.getPosition().equals(this.getPosition())) & (p.getTeam().equals(this.getTeam()))) {
             return true;
-        }else {
+        }
+        else {
             return false;
         }
         
