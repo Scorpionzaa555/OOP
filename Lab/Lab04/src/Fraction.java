@@ -1,5 +1,6 @@
 public class Fraction {
-    public int topN, btmN;
+    public int topN;
+    public int btmN;
     public String toFraction () {
         return topN + "/" + btmN;
     }
@@ -14,7 +15,8 @@ public class Fraction {
         if (btmN == f.btmN) {
             topN += f.topN;
             btmN = f.btmN;
-        } else {
+        }
+        else {
             topN = topN*f.btmN+f.topN*btmN;
             btmN *= f.btmN;
         }
