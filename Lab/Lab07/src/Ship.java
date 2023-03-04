@@ -12,7 +12,8 @@ public class Ship extends Vehicle implements Floatable {
         if(getFuel() >= 50) {
             setFuel(getFuel() - 50);
             System.out.println("Ship moves");
-        } else {
+        }
+        else {
             System.out.println("Fuel is not enough.");
         }
     }
@@ -22,7 +23,8 @@ public class Ship extends Vehicle implements Floatable {
         if(getFuel() >= 10) {
             setFuel(getFuel() - 10);
             System.out.println("Engine starts");
-        } else {
+        }
+        else {
             System.out.println("Fuel is not enough.");
         }
     }
