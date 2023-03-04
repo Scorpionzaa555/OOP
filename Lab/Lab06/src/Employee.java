@@ -10,7 +10,8 @@ public class Employee {
     public boolean buyFood(Seller s) {
         if(s == null) {
             return false;
-        } else {
+        }
+        else {
             this.eat(s.sell(this));
             return true;
         }
