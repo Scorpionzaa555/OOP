@@ -7,7 +7,8 @@ public class Createlineln {
         for (int n = 1; n <= num; n++) {
             if (n%5 != 0) {
                 System.out.print("|");
-            } else {
+            }
+            else {
                 System.out.print("|");
                 System.out.println();
             }
