@@ -10,7 +10,8 @@ public class Bank {
         
         if ((type == 'A') && (type == 'C')) {
             total = money * 1.015;
-        } else if (type == 'B') {
+        }
+        else if (type == 'B') {
             total = money * 1.02;
         } 
         if (type == 'X') {
