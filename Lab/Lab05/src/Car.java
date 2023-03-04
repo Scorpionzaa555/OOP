@@ -24,7 +24,8 @@ public class Car extends Vehicle {
         if (fuel > 50) {
             setFuel(fuel - 50);
             System.out.println("Move.");
-        } else {
+        }
+        else {
             System.out.println("Please add fuel.");
         }
     }
