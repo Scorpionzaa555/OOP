@@ -14,7 +14,8 @@ public class CheckingAccount extends Account {
     public void setCredit(double credit) {
         if(credit > 0) {
             this.credit = credit;
-        } else {
+        }
+        else {
             System.out.println("Input number must be a positive integer.");
         }
     }
@@ -28,12 +29,14 @@ public class CheckingAccount extends Account {
         if(getBalance() - a > 0) {
             setBalance(getBalance() - a);
             System.out.println(a + " baht is withdrawn from " + getName() + " and your credit balance is " + getCredit() + ".");
-        } else {
+        }
+        else {
             if(getBalance() - a + getCredit() > 0) {
                 setCredit(this.credit - a);
                 setBalance(0);
                 System.out.println(a + " baht is withdrawn from " + getName() + " and your credit balance is " + getCredit() + ".");
-            } else {
+            }
+            else {
                 System.out.println("Not enough money!");
             }
         }
