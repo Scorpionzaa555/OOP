@@ -7,9 +7,11 @@ public class CountOddEven {
             num = sc.nextInt();
             if (num == -1) {
                 break;
-            }else if (num%2 == 0) {
+            }
+            else if (num%2 == 0) {
                 cnt1 += 1;
-            } else {
+            }
+            else {
                 cnt2 += 1;
             }
             System.out.println();
