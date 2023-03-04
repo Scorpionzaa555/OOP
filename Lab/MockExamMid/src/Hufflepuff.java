@@ -9,7 +9,8 @@ public class Hufflepuff extends Houses implements Magicable{
             int totalDamage = spell.getDamage() + player.getAttackDamage();
             target.setHP(target.getHP() - totalDamage);
             player.setMana(player.getMana() - 3);
-        } else if (spell instanceof Expelliarmus) {
+        }
+        else if (spell instanceof Expelliarmus) {
             int totalDamage = spell.getDamage() + player.getAttackDamage();
             target.setHP(target.getHP() - totalDamage);
             player.setMana(player.getMana() - 4);
