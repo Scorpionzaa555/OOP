@@ -13,9 +13,11 @@ public class Pigeon extends Bird {
     public void eat(String food) {
         if (food.equals("worm")) {
             super.eat(0.5);
-        } else if (food.equals("seed")) {
+        }
+        else if (food.equals("seed")) {
             super.eat(0.2);
-        } else {
+        }
+        else {
             System.out.println("Pigeon can eat only worm and seed.");
         }
     }
@@ -30,7 +32,8 @@ public class Pigeon extends Bird {
         if(getWeight() >= 5) {
             setWeight(getWeight() - 0.25);
             System.out.println("Fly Fly");
-        } else {
+        }
+        else {
             System.out.println("I'm hungry.");
         }
     }
@@ -40,7 +43,8 @@ public class Pigeon extends Bird {
         if(getWeight() >= 5) {
             setWeight(getWeight() - 0.5);
             System.out.println("Take Off");
-        } else {
+        }
+        else {
             System.out.println("I'm hungry.");
         }
     }
@@ -50,7 +54,8 @@ public class Pigeon extends Bird {
         if(getWeight() >= 5) {
             setWeight(getWeight() - 0.5);
             System.out.println("Landing");
-        } else {
+        }
+        else {
             System.out.println("I'm hungry.");
         }
     }
