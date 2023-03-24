@@ -19,6 +19,7 @@ public class Main {
 //        for (int i = 0; i < myBank.getNumAccount(); i++) {
 //            myBank.getAccount(i).showAccount();
 //        }
+//        System.out.println("");
         
         Customer cust = new Customer("Somsri", "Boonjing");
         Account acct1 = new Account(5000, "Somsri01");
