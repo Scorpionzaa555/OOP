@@ -1,9 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class CalculatorOneGUI implements ActionListener {
+public class CalculatorOneGUI {
     private JFrame f;
     private JPanel panel;
     private JButton b1;
@@ -42,36 +40,5 @@ public class CalculatorOneGUI implements ActionListener {
         f.add(panel);
         f.add(tf3);
         f.setVisible(true);
-        
-        b1.addActionListener(this);
-        b2.addActionListener(this);
-        b3.addActionListener(this);
-        b4.addActionListener(this);
-    }
-    
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        double num1 = 0, num2 = 0;
-        try {
-            num1 = Double.parseDouble(tf1.getText());
-            num2 = Double.parseDouble(tf2.getText());
-        } catch (NumberFormatException ex) {
-            tf3.setText("???");
-        }
-        String total = "";
-        if (e.getSource().equals(b1)) {
-            total += String.valueOf(num1+num2);
-        } else if (e.getSource().equals(b2)) {
-            total += String.valueOf(num1-num2);
-        } else if (e.getSource().equals(b3)) {
-            total += String.valueOf(num1*num2);
-        } else if (e.getSource().equals(b4)) {
-            if (num1 == 0 || num2 == 0) {
-                total += "NOOOOOO";
-            } else {
-                total += String.valueOf(num1/num2);
-            }
-        }
-        tf3.setText(total);
     }
 }
