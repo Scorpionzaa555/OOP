@@ -58,43 +58,43 @@ public class MDIFromGUI {
         inFrame2 = new JInternalFrame("Application 02", true, true, true, true);
         inFrame3 = new JInternalFrame("Application 03", true, true, true, true);
     
-        inFrame1.setSize(500, 300);
+        inFrame1.setSize(250, 140);
         inFrame1.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        inFrame1.setLocation(0, 0);
-        inFrame1.getContentPane().add(new JLabel("Frame 1 contents..."));
+        inFrame1.setLocation(25, 275);
+        //inFrame1.getContentPane().add(new JLabel("Frame 1 contents..."));
         //inFrame1.setResizable(false);
         //inFrame1.setMaximizable(false);
         //inFrame1.setClosable(false);
-        inFrame1.pack();
+        //inFrame1.pack();
         inFrame1.setVisible(true);
         
-        inFrame2.setSize(500, 300);
+        inFrame2.setSize(240, 170);
         inFrame2.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        inFrame2.setLocation(400, 0);
-        inFrame2.getContentPane().add(new JLabel("Frame 2 contents..."));
+        inFrame2.setLocation(200, 70);
+        //inFrame2.getContentPane().add(new JLabel("Frame 2 contents..."));
         //inFrame2.setResizable(false);
         //inFrame2.setMaximizable(false);
         //inFrame2.setClosable(false);
-        inFrame2.pack();
+        //inFrame2.pack();
         inFrame2.setVisible(true);
         
-        inFrame3.setSize(500, 300);
+        inFrame3.setSize(390, 230);
         inFrame3.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        inFrame3.setLocation(200, 300);
-        inFrame3.getContentPane().add(new JLabel("Frame 3 contents..."));
+        inFrame3.setLocation(470, 190);
+        //inFrame3.getContentPane().add(new JLabel("Frame 3 contents..."));
         //inFrame3.setResizable(false);
         //inFrame3.setMaximizable(false);
         //inFrame3.setClosable(false);
-        inFrame3.pack();
+        //inFrame3.pack();
         inFrame3.setVisible(true);
         
         desktopPane.add(inFrame1);
         desktopPane.add(inFrame2);
         desktopPane.add(inFrame3);
         
-        frame.add(desktopPane, BorderLayout.CENTER);
-        frame.setMinimumSize(new Dimension(1000, 700));
-        frame.pack();
+        frame.add(desktopPane);
+        frame.setMinimumSize(new Dimension(910, 510));
+        //frame.pack();
         frame.setVisible(true);
         //frame.setExtendedState(Frame.MAXIMIZED_BOTH);
     }
