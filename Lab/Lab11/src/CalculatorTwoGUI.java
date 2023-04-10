@@ -131,7 +131,7 @@ public class CalculatorTwoGUI implements ActionListener {
         }
 
         String display = tf.getText();
-        display = "";
+        display = (display != null ? display : "");
         if(e.getActionCommand() == "0") {
             tf.setText(display + "0");
         }
