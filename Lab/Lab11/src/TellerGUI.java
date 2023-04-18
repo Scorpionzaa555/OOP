@@ -16,6 +16,8 @@ public class TellerGUI {
     private JButton b2;
     private JButton b3;
     
+    private Account acct;
+    
     public TellerGUI() {
         
         f = new JFrame("Teller GUI");
