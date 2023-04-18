@@ -41,6 +41,11 @@ public class TellerGUI {
         b1 = new JButton("Deposit");
         b2 = new JButton("Withdraw");
         b3 = new JButton("Exit");
+        
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
+        
         panel2.add(b1);
         panel2.add(b2);
         panel2.add(b3);
@@ -49,4 +54,20 @@ public class TellerGUI {
         
         f.setVisible(true);
     }
+    
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        if(ae.getSource().equals(b1)) {
+            double num = 0;
+            num = Double.parseDouble(tf2.getText());
+        }
+        else if(ae.getSource().equals(b2)) {
+            double num = 0;
+            num = Double.parseDouble(tf2.getText());
+        }
+        else if(ae.getSource().equals(b3)) {
+            f.dispose();
+        }
+    }
+        
 }
