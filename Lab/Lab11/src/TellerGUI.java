@@ -64,10 +64,12 @@ public class TellerGUI {
         if(ae.getSource().equals(b1)) {
             double num = 0;
             num = Double.parseDouble(tf2.getText());
+            acct.setBalance(acct.getBalance() + num);
         }
         else if(ae.getSource().equals(b2)) {
             double num = 0;
             num = Double.parseDouble(tf2.getText());
+            acct.setBalance(acct.getBalance() - num);
         }
         else if(ae.getSource().equals(b3)) {
             f.dispose();
