@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TellerGUI {
+public class TellerGUI implements ActionListener {
     
     private JFrame f;
     private JPanel panel1;
@@ -52,56 +52,72 @@ public class TellerGUI {
         f.add(panel1);
         f.add(panel2);
         
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
+        
         f.setVisible(true);
         
-        b1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double num = 0;
-                try {
-                    num = Double.parseDouble(tf2.getText());
-                    if (num < 0) {
-                        num = 0;
-                    }
-                } catch (NumberFormatException ex) {
-                    num = 0;
-                }
-                acct.setBalance(acct.getBalance() + num);
-                if (!tf2.getText().isEmpty()) {
-                    tf2.setText("");
-                }
-                tf1.setText(String.valueOf(acct.getBalance()));
-            }
-
-        });
-        b2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double num = 0;
-                try {
-                    num = Double.parseDouble(tf2.getText());
-                    if (num < 0) {
-                        num = 0;
-                    }
-                    if (acct.getBalance() < num) {
-                        return;
-                    }
-                } catch (NumberFormatException ex) {
-                    num = 0;
-                }
-                acct.setBalance(acct.getBalance() - num);
-                if (!tf2.getText().isEmpty()) {
-                    tf2.setText("");
-                }
-                tf1.setText(String.valueOf(acct.getBalance()));
-            }
-        });
-        b3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                f.dispose();
-            }
-        });
+//        b1.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                double num = 0;
+//                try {
+//                    num = Double.parseDouble(tf2.getText());
+//                    if (num < 0) {
+//                        num = 0;
+//                    }
+//                } catch (NumberFormatException ex) {
+//                    num = 0;
+//                }
+//                acct.setBalance(acct.getBalance() + num);
+//                if (!tf2.getText().isEmpty()) {
+//                    tf2.setText("");
+//                }
+//                tf1.setText(String.valueOf(acct.getBalance()));
+//            }
+//
+//        });
+//        b2.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                double num = 0;
+//                try {
+//                    num = Double.parseDouble(tf2.getText());
+//                    if (num < 0) {
+//                        num = 0;
+//                    }
+//                    if (acct.getBalance() < num) {
+//                        return;
+//                    }
+//                } catch (NumberFormatException ex) {
+//                    num = 0;
+//                }
+//                acct.setBalance(acct.getBalance() - num);
+//                if (!tf2.getText().isEmpty()) {
+//                    tf2.setText("");
+//                }
+//                tf1.setText(String.valueOf(acct.getBalance()));
+//            }
+//        });
+//        b3.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                f.dispose();
+//            }
+//        });
+    }
+    
+    public void actionPerformed(ActionEvent ev){
+        if(ev.getSource().equals(b1)){
+            tf1.setText(acct.getBalance() + Double.parseDouble(tf2.getText())+"");
+            acct.setBalance(Double.parseDouble(tf1.getText()));
+        }else if(ev.getSource().equals(b2) && acct.getBalance() >= Double.parseDouble(tf2.getText())){
+            tf1.setText(acct.getBalance() - Double.parseDouble(tf2.getText())+"");
+            acct.setBalance(Double.parseDouble(tf1.getText()));
+        }else if(ev.getSource().equals(b3)){
+            System.exit(0);
+        }
     }
     
 //    @Override
