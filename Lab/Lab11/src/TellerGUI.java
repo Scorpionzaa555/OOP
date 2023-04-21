@@ -58,22 +58,19 @@ public class TellerGUI implements ActionListener {
     public void actionPerformed(ActionEvent ae){
         double num = 0;
         if(ae.getSource().equals(b1)){
-            try {
-                num = Double.parseDouble(tf2.getText());
-                if(num == 0) {
-                    num = 0;
-                }
-            }catch(NumberFormatException e) {
-                num = 0;
+            if(Double.parseDouble(tf2.getText()) < 0) {
+                acct.setBalance(Double.parseDouble(tf1.getText()));
+            } else {
+                tf1.setText(acct.getBalance() + Double.parseDouble(tf2.getText())+"");
+                acct.setBalance(Double.parseDouble(tf1.getText()));
             }
-            acct.setBalance(acct.getBalance() + num);
-            //tf1.setText(acct.getBalance() + Double.parseDouble(tf2.getText())+"");
-            //tf1.setText(acct.deposit(Integer.parseInt((tf2.getText() + ""))));
         }else if(ae.getSource().equals(b2)){
-            //tf1.setText(acct.getBalance() - Double.parseDouble(tf2.getText())+"");
-            //result = acct.withdraw((tf2.getText()) + "");
-            //tf1.setText(result);
-            //acct.setBalance(acct.getBalance() - result);
+            if(Double.parseDouble(tf2.getText()) < 0) {
+                acct.setBalance(Double.parseDouble(tf1.getText()));
+            } else {
+                tf1.setText(acct.getBalance() - Double.parseDouble(tf2.getText())+"");
+                acct.setBalance(Double.parseDouble(tf1.getText()));
+            }
         }else if(ae.getSource().equals(b3)){
             System.exit(0);
         }
