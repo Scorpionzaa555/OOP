@@ -6,13 +6,8 @@ public class CalculatorOneGUI implements ActionListener {
     
     private JFrame f;
     private JPanel panel;
-    private JButton b1;
-    private JButton b2;
-    private JButton b3;
-    private JButton b4;
-    private TextField tf1;
-    private TextField tf2;
-    private TextField tf3;
+    private JButton b1, b2, b3, b4;
+    private TextField tf1, tf2, tf3;
     
     public CalculatorOneGUI() {
         
@@ -68,30 +63,3 @@ public class CalculatorOneGUI implements ActionListener {
         tf3.setText(total);
     }
 }
-    
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//        double num1 = 0, num2 = 0;
-//        try {
-//            num1 = Double.parseDouble(tf1.getText());
-//            num2 = Double.parseDouble(tf2.getText());
-//        } catch (NumberFormatException ex) {
-//            tf3.setText("???");
-//        }
-//        String total = "";
-//        if (e.getSource().equals(b1)) {
-//            total += String.valueOf(num1+num2);
-//        } else if (e.getSource().equals(b2)) {
-//            total += String.valueOf(num1-num2);
-//        } else if (e.getSource().equals(b3)) {
-//            total += String.valueOf(num1*num2);
-//        } else if (e.getSource().equals(b4)) {
-//            if (num1 == 0 || num2 == 0) {
-//                total += "NOOOOOO";
-//            } else {
-//                total += String.valueOf(num1/num2);
-//            }
-//        }
-//        tf3.setText(total);
-//    }
-//}
