@@ -38,18 +38,16 @@ public class Account {
 //    }
     
     public void withdraw(double amount) throws WithdrawException {
-        if(amount > 0) {
-            if(getBalance() - amount > 0) {
-                setBalance(getBalance() - amount);
-                System.out.println(amount + " baht is withdrawn from " + getName() + ".");
+        if (amount < 0) {
+                  System.out.println("Input number must be a positive integer.");
+            }
+            else if (this.getBalance() - amount < 0) {
+                  throw new WithdrawException("Account " + this.name + " has not enough money.");
             }
             else {
-                System.out.println("Not enough money!");
+                  System.out.println(amount + " baht is withdrawn from " + this.getName() + ".");
+                  this.setBalance(this.getBalance() - amount);
             }
-        }
-        else{
-            throw new WithdrawException("Account " + this.name + " has not enough money.");
-        } 
     }
     
     public void setName(String name) {
