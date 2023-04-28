@@ -48,7 +48,7 @@ public class Account {
             }
         }
         else{
-            throw new WithdrawException("Account " + this.name + " has not enough money.");
+            throw new WithdrawException("WithdrawException: Account " + this.name + " has not enough money.");
         } 
     }
     

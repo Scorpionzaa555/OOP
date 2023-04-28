@@ -35,7 +35,7 @@ public class CheckingAccount extends Account {
                 this.balance = 0;
                 System.out.println(amount + " baht is withdrawn from " + this.name + " and your credit balance is " + this.credit + ".");
             } else if (this.balance - amount < 0 && this.balance - amount + this.credit < 0) {
-                throw new WithdrawException("Account " + this.name + " has not enough money.");
+                throw new WithdrawException("WithdrawException: Account " + this.name + " has not enough money.");
             }
         } else {
             super.withdraw(amount);
