@@ -2,9 +2,9 @@ import java.io.Serializable;
 public class Student implements Serializable {
     private String ID;
     private String name;
-    private Integer money;
+    private int money;
 
-    public Student(String ID, String name, Integer money) {
+    public Student(String ID, String name, int money) {
         this.ID = ID;
         this.name = name;
         this.money = money;
@@ -30,7 +30,7 @@ public class Student implements Serializable {
       return GPA;
     }
   
-    public void setmoney(Integer money) {
+    public void setmoney(int money) {
       this.money = money;
     }
 }
