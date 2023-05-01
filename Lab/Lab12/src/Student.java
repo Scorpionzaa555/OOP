@@ -18,7 +18,7 @@ public class Student implements Serializable {
       return ID;
     }
   
-    public void setID(String ID){
+    public void setID(int ID){
       this.ID = ID;
     }
   
