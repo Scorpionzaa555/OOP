@@ -1,16 +1,20 @@
 import java.io.Serializable;
 public class Student implements Serializable {
-    private String ID;
     private String name;
+    private int ID;
     private int money;
 
-    public Student(String ID, String name, int money) {
-        this.ID = ID;
+    public Student() {
+        this("", 0, 0);
+    }
+    
+    public Student(String name, int ID, int money) {
         this.name = name;
+        this.ID = ID;
         this.money = money;
     }
   
-    public String getID() {
+    public int getID() {
       return ID;
     }
   
@@ -26,8 +30,8 @@ public class Student implements Serializable {
       this.name = name;
     }
   
-    public double getmoney() {
-      return GPA;
+    public int getmoney() {
+      return money;
     }
   
     public void setmoney(int money) {
