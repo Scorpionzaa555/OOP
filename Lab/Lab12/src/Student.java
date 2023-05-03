@@ -1,4 +1,4 @@
-import java.io.Serializable;
+import java.io.*;
 public class Student implements Serializable {
     private String name;
     private int ID;
@@ -30,11 +30,11 @@ public class Student implements Serializable {
       this.name = name;
     }
   
-    public int getmoney() {
+    public int getMoney() {
       return money;
     }
   
-    public void setmoney(int money) {
+    public void setMoney(int money) {
       this.money = money;
     }
 }
